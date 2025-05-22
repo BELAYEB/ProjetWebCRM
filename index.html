@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniCRM | Welcome</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="home-container">
+    <h1>Welcome to MiniCRM</h1>
+    <p class="description">
+      MiniCRM is a lightweight customer relationship and project management system. <br />
+      It helps you manage users, clients, projects, and tasks — all from one simple interface.
+    </p>
+
+    <div class="actions">
+      <a href="register.html" class="btn">Register</a>
+      <a href="login.html" class="btn btn-secondary">Login</a>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body theme */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Home Container */
+.home-container {
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.home-container h1 {
+  font-size: 2em;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1em;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+</style>

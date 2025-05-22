@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register</title>
+</head>
+<body>
+  <div class="container">
+    <h2>User Registration</h2>
+    <form action="register.php" method="POST" onsubmit="return validateForm()">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" id="password" placeholder="Password" required />
+      <select name="role" id="role" onchange="toggleCompany()" required>
+        <option value="">Select Role</option>
+        <option value="admin">Admin</option>
+        <option value="member">Team Member</option>
+        <option value="client">Client</option>
+      </select>
+      <input type="text" name="company" id="company" placeholder="Company (for clients)" style="display:none;" />
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    function toggleCompany() {
+  const role = document.getElementById('role').value;
+  const companyField = document.getElementById('company');
+  companyField.style.display = (role === 'client') ? 'block' : 'none';
+}
+
+function validateForm() {
+  const password = document.getElementById('password').value;
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters.");
+    return false;
+  }
+  return true;
+}
+
+</script>

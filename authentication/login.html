@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiniCRM | Login</title>
+ 
+</head>
+<body>
+  <div class="home-container">
+    <h1>Login to MiniCRM</h1>
+    <form action="login.php" method="POST" id="loginForm" onsubmit="return validateLogin()">
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        autocomplete="username"
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        required
+        autocomplete="current-password"
+      />
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <p style="margin-top: 20px; font-size: 0.9em; color: #555;">
+      Don't have an account? <a href="register/index.html" style="color:#00bcd4;">Register here</a>
+    </p>
+  </div>
+
+  <script>
+    function validateLogin() {
+      const email = document.forms["loginForm"]["email"].value;
+      const password = document.forms["loginForm"]["password"].value;
+
+      if (email.trim() === "" || password.trim() === "") {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      // Basic email format check
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>
